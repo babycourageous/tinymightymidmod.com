@@ -1,16 +1,18 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
+import { Nanum_Gothic, Ubuntu_Mono, Monoton, Rubik } from 'next/font/google'
 import './globals.css'
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
+const ubuntu = Monoton({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+  variable: '--font-ubuntu',
 })
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+const nanum = Rubik({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+  variable: '--font-nanum',
 })
 
 export const metadata: Metadata = {
@@ -26,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${ubuntu.variable} ${nanum.variable} antialiased`}>
         {children}
       </body>
     </html>
