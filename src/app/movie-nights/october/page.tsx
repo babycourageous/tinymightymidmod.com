@@ -287,8 +287,14 @@ export default function OctoberPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-10">
         {movies.map((movie) => (
           <div key={movie.title} className="flex flex-col">
-            <h2 className="text-2xl">{format(movie.date, 'EEEE MMM dd')}</h2>
-            <p>{movie.title}</p>
+            {movie.movies.length ? (
+              <>
+                <h2 className="text-2xl">
+                  {format(movie.date, 'EEEE MMM dd')}
+                </h2>
+                <p>{movie.title}</p>
+              </>
+            ) : null}
             <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-3 sm:gap-y-10 flex-1">
               {movie.movies.map((m) => (
                 <Movie movie={m} key={movie.title} />
