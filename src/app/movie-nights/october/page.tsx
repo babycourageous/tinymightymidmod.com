@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { format } from 'date-fns'
+import { YouTubeEmbed } from '@next/third-parties/google'
 
 //sickening, gruesome, shocking
 const movies: Array<{ title: string; date: string; movies: Array<Movie> }> = [
@@ -338,10 +339,9 @@ function Movie({ movie }: Props) {
         <p>{movie.description}</p>
       </div>
 
-      {/* </div> */}
-      {/* <div className="aspect-w-4 aspect-h-3">
+      <div>
         <YouTubeEmbed videoid={movie.videoId} />
-      </div> */}
+      </div>
     </div>
   )
 }
