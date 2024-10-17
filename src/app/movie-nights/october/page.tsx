@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { format } from 'date-fns'
 import { YouTubeEmbed } from '@next/third-parties/google'
 
-//sickening, gruesome, shocking
 const movies: Array<{ title: string; date: string; movies: Array<Movie> }> = [
   { title: '', date: '10/01/24', movies: [] },
   {
@@ -224,17 +223,16 @@ const movies: Array<{ title: string; date: string; movies: Array<Movie> }> = [
     date: '10/29/24',
     movies: [
       {
-        title: 'The Witches',
+        title: 'Gretel & Hansel',
         time: '7:30pm',
-        director: 'Nicolas Roeg',
-        runningTime: 91,
-        year: 1990,
-        tagline:
-          'Saving the world from witches is a tall order for a boy they’ve turned into a mouse!',
+        director: 'Osgood Perkins',
+        runningTime: 87,
+        year: 2020,
+        tagline: 'A grim fairy tale.',
         description:
-          'A young boy named Luke and his grandmother go on vacation only to discover their hotel is hosting an international witch convention, where the Grand High Witch is unveiling her master plan to turn all children into mice. Will Luke fall victim to the witches’ plot before he can stop them?',
-        videoId: '7mmbKELT2VU',
-        poster: 'the-witches.jpg',
+          'A long time ago in a distant fairy tale countryside, a young girl leads her little brother into a dark wood in desperate search of food and work, only to stumble upon a nexus of terrifying evil.',
+        videoId: 'QZblQLhKcZQ',
+        poster: 'gretel-and-hansel.jpg',
       },
       {
         title: 'The Witch',
