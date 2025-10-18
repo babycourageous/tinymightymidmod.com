@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Rubik&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: Rubik, 'sans-serif';
+  --font-title: Monoton, 'sans-serif';
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background-color: var(--color-zinc-950);
+    font-family: var(--font-sans);
+    color: var(--color-zinc-200);
+  }
+}
