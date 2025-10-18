@@ -1,9 +1,7 @@
-import { YouTubeEmbed } from '@next/third-parties/google'
-import { format } from 'date-fns'
-import Image from 'next/image'
+import type { Movie } from './movie.schema'
 
-//sickening, gruesome, shocking
 const movies: Array<{ title: string; date: string; movies: Array<Movie> }> = [
+  { title: '', date: '10/01/24', movies: [] },
   {
     title: 'Spiritual Scares',
     date: '10/03/24',
@@ -32,6 +30,37 @@ const movies: Array<{ title: string; date: string; movies: Array<Movie> }> = [
           'Six friends hire a medium to hold a séance via Zoom during lockdown — but they get far more than they bargained for as things quickly go wrong. When an evil spirit starts invading their homes, they begin to realise they might not survive the night.',
         videoId: 'SNlKbqHqGcY',
         poster: 'host.jpg',
+      },
+    ],
+  },
+
+  {
+    title: 'Tuesday Double Feature',
+    date: '10/08/24',
+    movies: [
+      {
+        title: 'The Worst Witch',
+        time: '7:30pm',
+        director: 'Robert Young',
+        runningTime: 70,
+        year: 1986,
+        tagline: 'Things never go right for Mildred Hubble…',
+        description:
+          'Mildred is one of the young girls at a prestigious witch academy. She can’t seem to do anything right and is picked on by classmates and teachers. The headmistress of the school, Miss Cackle, has an evil twin sister who plans to destroy the school. Can Mildred foil the plan before the Grand Wizard comes to the Academy for a Halloween celebration you’ll never forget?!!',
+        videoId: 'dOZNE7IPUkc',
+        poster: 'worst-witch.jpg',
+      },
+      {
+        title: 'The Craft',
+        time: '10:00pm',
+        director: 'Andrew Fleming',
+        runningTime: 101,
+        year: 1996,
+        tagline: 'Welcome to the witching hour.',
+        description:
+          'A Catholic school newcomer falls in with a clique of teen witches who wield their powers against all who dare to cross them – be they teachers, rivals or meddlesome parents.',
+        videoId: 'SxEqB--5ToI',
+        poster: 'craft.jpg',
       },
     ],
   },
@@ -65,6 +94,37 @@ const movies: Array<{ title: string; date: string; movies: Array<Movie> }> = [
       },
     ],
   },
+
+  {
+    title: 'Tuesday Double Feature',
+    date: '10/15/24',
+    movies: [
+      {
+        title: 'Earnest Scared Stupid',
+        time: '7:30pm',
+        year: 1991,
+        director: 'John Cherry',
+        runningTime: 91,
+        tagline: "A comedy so funny it's scary",
+        description:
+          'Well-intentioned, eternally bumbling Ernest P. Worrell accidentally releases an evil demon from its sacred tomb. As the demon flexes its power and goes on a ruinous rampage, good-guy Ernest tries to step in to save the town from mass destruction. Trouble is, a 200-year-old curse has scared Ernest stupid, and that means hilarity all around! So, kick back and let the laugh-ridden adventures begin.',
+        videoId: 'daxX6NY1tVM',
+        poster: 'earnest.jpg',
+      },
+      {
+        title: 'Army Of Darkness',
+        time: '10:00pm',
+        year: 1992,
+        director: 'Sam Raimi',
+        runningTime: 81,
+        tagline: 'Trapped in time. Surrounded by evil. Low on gas.',
+        description:
+          'Ash, a handsome, shotgun-toting, chainsaw-armed department store clerk, is time warped backwards into England’s Dark Ages, where he romances a beauty and faces legions of the undead.',
+        videoId: 'UHZQEtG8xYo',
+        poster: 'army.jpg',
+      },
+    ],
+  },
   {
     title: 'Bloody Slashers',
     date: '10/17/24',
@@ -95,9 +155,40 @@ const movies: Array<{ title: string; date: string; movies: Array<Movie> }> = [
       },
     ],
   },
+
   {
-    title: 'Female Frights',
-    date: '10/024/24',
+    title: 'Tuesday Double Feature',
+    date: '10/22/24',
+    movies: [
+      {
+        title: 'Arachnophobia',
+        time: '7:30pm',
+        year: 1990,
+        director: 'Frank Marshall',
+        runningTime: 109,
+        tagline: 'Eight legs, two fangs, and an attitude.',
+        description:
+          'A large spider from the jungles of South America is accidentally transported in a crate with a dead body to America where it mates with a local spider. Soon after, the residents of a small California town disappear as the result of spider bites from the deadly spider offspring. It’s up to a couple of doctors with the help of an insect exterminator to annihilate these eight legged freaks.',
+        videoId: 'vlK_P6ppLu0',
+        poster: 'arachnophobia.jpg',
+      },
+      {
+        title: 'Buffy The Vampire Slayer',
+        time: '10:00pm',
+        year: 1992,
+        director: 'Fran Rubel Kuzu',
+        runningTime: 86,
+        tagline: 'She knows a sucker when she sees one.',
+        description:
+          'Blonde, bouncy Buffy is your typical high school cheerleader. But all that changes when a strange man informs her she’s been chosen by fate to kill vampires.',
+        videoId: 'pnZkV_aR_9w',
+        poster: 'buffy.jpg',
+      },
+    ],
+  },
+  {
+    title: 'Femme Frights',
+    date: '10/24/24',
     movies: [
       {
         title: 'Raw',
@@ -121,6 +212,37 @@ const movies: Array<{ title: string; date: string; movies: Array<Movie> }> = [
           'A woman with a metal plate in her head from a childhood car accident embarks on a bizarre journey, bringing her into contact with a firefighter who’s reunited with his missing son after 10 years.',
         videoId: '_DmFHh7KsWc',
         poster: 'titane.jpg',
+      },
+    ],
+  },
+
+  {
+    title: 'Tuesday Double Feature',
+    date: '10/29/24',
+    movies: [
+      {
+        title: 'Gretel & Hansel',
+        time: '7:30pm',
+        director: 'Osgood Perkins',
+        runningTime: 87,
+        year: 2020,
+        tagline: 'A grim fairy tale.',
+        description:
+          'A long time ago in a distant fairy tale countryside, a young girl leads her little brother into a dark wood in desperate search of food and work, only to stumble upon a nexus of terrifying evil.',
+        videoId: 'QZblQLhKcZQ',
+        poster: 'gretel-and-hansel.jpg',
+      },
+      {
+        title: 'The Witch',
+        time: '10:00pm',
+        director: 'Robert Eggers',
+        runningTime: 92,
+        year: 2015,
+        tagline: 'Evil takes many forms.',
+        description:
+          'In 1630, a farmer relocates his family to a remote plot of land on the edge of a forest where strange, unsettling things happen. With suspicion and paranoia mounting, each family member’s faith, loyalty and love are tested in shocking ways.',
+        videoId: '97OQ7MQC5Ck',
+        poster: 'the-witch.jpg',
       },
     ],
   },
@@ -155,61 +277,5 @@ const movies: Array<{ title: string; date: string; movies: Array<Movie> }> = [
     ],
   },
 ]
-export default function OctoberPage() {
-  return (
-    <main className="px-3 py-2 space-y-7">
-      {movies.map((movie) => (
-        <div key={movie.title}>
-          <h2 className="text-2xl">{format(movie.date, 'MMM dd')}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-2">
-            {movie.movies.map((m) => (
-              <Movie movie={m} key={m.title} />
-            ))}
-          </div>
-        </div>
-      ))}
-    </main>
-  )
-}
 
-type Movie = {
-  title: string
-  time: string
-  director: string
-  year: number
-  tagline?: string
-  description: string
-  videoId: string
-  poster: string
-  runningTime: number
-}
-type Props = { movie: Movie }
-function Movie({ movie }: Props) {
-  return (
-    <div className="flex flex-col justify-between">
-      <p>
-        <span className="text-lg semibold">{movie.time}</span> - {movie.title} (
-        {movie.year})
-      </p>
-      <div className="flex gap-x-3">
-        <div className="hidden md:block flex-shrink-0 [flex-basis:15rem] bg-blue-300">
-          <div className="relative aspect-w-2 aspect-h-3 bg-red-400">
-            <Image
-              src={`/${movie.poster}`}
-              alt="poster"
-              fill
-              // objectFit="cover"
-            />
-          </div>
-        </div>
-        <div className="flex-grow-0">
-          <p>Directed by: {movie.director}</p>
-          <p>Running Time: {movie.runningTime} mins</p>
-          <p className="uppercase text-sm text-gray-400">{movie.tagline}</p>
-          <p>{movie.description}</p>
-        </div>
-      </div>
-      <div>{<YouTubeEmbed videoid={movie.videoId} />}</div>
-    </div>
-  )
-}
+export { movies }
