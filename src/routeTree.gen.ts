@@ -32,7 +32,7 @@ const MovieNightsOctoberRoute = MovieNightsOctoberRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/movie-nights/october': typeof MovieNightsOctoberRoute
-  '/movie-nights': typeof MovieNightsIndexRoute
+  '/movie-nights/': typeof MovieNightsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -47,7 +47,7 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/movie-nights/october' | '/movie-nights'
+  fullPaths: '/' | '/movie-nights/october' | '/movie-nights/'
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/movie-nights/october' | '/movie-nights'
   id: '__root__' | '/' | '/movie-nights/october' | '/movie-nights/'
@@ -71,7 +71,7 @@ declare module '@tanstack/react-router' {
     '/movie-nights/': {
       id: '/movie-nights/'
       path: '/movie-nights'
-      fullPath: '/movie-nights'
+      fullPath: '/movie-nights/'
       preLoaderRoute: typeof MovieNightsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
